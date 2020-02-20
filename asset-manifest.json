@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/psych_chat/static/css/main.d1b05096.chunk.css",
-    "main.js": "/psych_chat/static/js/main.58b33b09.chunk.js",
-    "main.js.map": "/psych_chat/static/js/main.58b33b09.chunk.js.map",
-    "runtime-main.js": "/psych_chat/static/js/runtime-main.d7aebeb2.js",
-    "runtime-main.js.map": "/psych_chat/static/js/runtime-main.d7aebeb2.js.map",
-    "static/js/2.b7230f04.chunk.js": "/psych_chat/static/js/2.b7230f04.chunk.js",
-    "static/js/2.b7230f04.chunk.js.map": "/psych_chat/static/js/2.b7230f04.chunk.js.map",
-    "index.html": "/psych_chat/index.html",
-    "precache-manifest.0fed18a8c9b66edfecf058bca364f718.js": "/psych_chat/precache-manifest.0fed18a8c9b66edfecf058bca364f718.js",
-    "service-worker.js": "/psych_chat/service-worker.js",
-    "static/css/main.d1b05096.chunk.css.map": "/psych_chat/static/css/main.d1b05096.chunk.css.map",
-    "static/js/2.b7230f04.chunk.js.LICENSE.txt": "/psych_chat/static/js/2.b7230f04.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/psych_chat/static/media/logo.5d5d9eef.svg"
+    "main.css": "/Spring-Chatbot/static/css/main.d1b05096.chunk.css",
+    "main.js": "/Spring-Chatbot/static/js/main.f6024739.chunk.js",
+    "main.js.map": "/Spring-Chatbot/static/js/main.f6024739.chunk.js.map",
+    "runtime-main.js": "/Spring-Chatbot/static/js/runtime-main.1c5d4cde.js",
+    "runtime-main.js.map": "/Spring-Chatbot/static/js/runtime-main.1c5d4cde.js.map",
+    "static/js/2.b7230f04.chunk.js": "/Spring-Chatbot/static/js/2.b7230f04.chunk.js",
+    "static/js/2.b7230f04.chunk.js.map": "/Spring-Chatbot/static/js/2.b7230f04.chunk.js.map",
+    "index.html": "/Spring-Chatbot/index.html",
+    "precache-manifest.fb6269abd42739a4edfcc04746c4c78f.js": "/Spring-Chatbot/precache-manifest.fb6269abd42739a4edfcc04746c4c78f.js",
+    "service-worker.js": "/Spring-Chatbot/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/Spring-Chatbot/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.b7230f04.chunk.js.LICENSE.txt": "/Spring-Chatbot/static/js/2.b7230f04.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/Spring-Chatbot/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.d7aebeb2.js",
+    "static/js/runtime-main.1c5d4cde.js",
     "static/js/2.b7230f04.chunk.js",
     "static/css/main.d1b05096.chunk.css",
-    "static/js/main.58b33b09.chunk.js"
+    "static/js/main.f6024739.chunk.js"
   ]
 }
