@@ -1,7 +1,7 @@
 {
   "name": "psych_chat",
   "version": "0.1.0",
-  "homepage": "https://spring-chatbot.github.io/psych_chat",
+  "homepage": "https://spring-chatbot.github.io/Spring-Chatbot",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
