@@ -4,6 +4,7 @@
   "homepage": "https://spring-chatbot.github.io/Spring-Chatbot",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.9.5",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
@@ -19,8 +20,8 @@
     "typescript": "^3.7.5"
   },
   "scripts": {
-      "predeploy": "npm run build",
-      "deploy": "gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
