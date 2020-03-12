@@ -11,8 +11,8 @@ class Header extends React.Component{
             <AppBar position="static">
                 <Toolbar>
                     <Typography variant="h6" align='center' className="header">
-            Welcome to Chatbot
-                    </Typography>
+                    Welcome to Chatbot
+                  </Typography>
                 </Toolbar>
             </AppBar>
         );
