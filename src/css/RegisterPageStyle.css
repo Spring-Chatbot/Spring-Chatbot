@@ -1,0 +1,49 @@
+#MainBox {
+	margin: -225px 0 0 -500px;
+	width: 1000px;
+	height: 475px;
+}
+
+#MainTextBox{
+	left: 40%;
+}
+
+#success{
+	background-color: white;
+	width: 665px;
+	height: 40px;
+	margin-top: 368px;
+	margin-left: 160px;
+	font-size: 18px;
+	line-height: 40px;
+	border-radius: 3px;
+}
+
+#notsuccess{
+	background-color: white;
+	width: 665px;
+	height: 40px;
+	margin-top: 17px;
+	margin-left: 160px;
+	font-size: 18px;
+	line-height: 40px;
+	border-radius: 3px;
+}
+
+#BackToLogin{
+	margin-top: -99px;
+	margin-left: 400px;
+}
+
+input[type=text] {
+	width: 665px;
+	margin-left: -20px;
+}
+
+button{
+	float: center;
+}
+
+#TextMargin{
+	margin-left: 0px;
+}
