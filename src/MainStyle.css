@@ -1,0 +1,67 @@
+body {
+  background-color: #6B6F94;
+  margin: 0px;
+  text-align: center;
+}
+
+h1 {
+	background-color: #ACF5F5;
+	margin-block-start: 0px;
+	margin-block-end: 0px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 65px;
+	font-weight: normal;
+	font-size: 25px;
+}
+
+#MainBox {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background-color: #CFD8DC;
+}
+
+#MainBoxBanner {
+	background-color: #788B91;
+	height: 65px;
+}
+
+#MainTextBox{
+	border-radius: 3px;
+	font-size: 22px;
+	background-color: white;
+	position: relative;
+	top: 25%;
+	margin: -18px 0px 0px -60px;
+	width: 324px;
+	height: 36px;
+	vertical-align: center;
+	line-height: 35px;
+}
+
+::placeholder {
+	font-size: 18px;
+	text-indent: 15px;
+	color: #1f1f1f;
+}
+
+input[type=text] {
+	border-radius: 3px;
+	font-size: 18px;
+	height: 40px;
+	margin-top: 25px;
+	text-indent: 15px;
+}
+
+button{
+	background-color: #7B8D93;
+	border-radius: 5px;
+	border: none;
+	color: white;
+	font-size: 18px;
+	margin-top: 25px;
+	text-align: center;
+	width: 200px;
+	height: 42px;
+}
