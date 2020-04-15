@@ -25,7 +25,7 @@ class Header extends React.Component{
 
   handleInput = (event) => {
     this.setState({
-      username: event.target.value,
+      event.target.value: event.target.value,
     });
     console.log("Hello");
   }
