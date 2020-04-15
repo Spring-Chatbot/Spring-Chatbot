@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {
     AppBar,
     Toolbar,
@@ -13,24 +13,27 @@ import {
     TextField
 } from "@material-ui/core";
 
-class Header extends React.Component{
-  constructor(props) {
-    super(props);
-    this.state = {
+export default function Header (){
+   const [ state, setState ] = useState({
       username: "",
       password: "",
-    }
-    this.handleInput = this.handleInput.bind(this);
-  }
+    })
 
-  handleInput = (event) => {
-    this.setState({
-      event.target.value: event.target.value,
+  const handleInput = (event : any) => {
+    if(event.target.name === "username")
+    setState({
+      username: event.target.value,
+      password: state.password,
     });
+    else 
+    setState({
+      username: state.username,
+      password: event.target.value,
+    });
+
     console.log("Hello");
   }
 
-    render(){
         return (
             <div>
                 <AppBar position="static">
@@ -48,8 +51,8 @@ class Header extends React.Component{
                                     <Typography gutterBottom variant="h5" component="h2" align="center">
                                         User Login
                                     </Typography>
-                                    <TextField required id="standard-required" name="username" label="Username" onChange={(e)=>this.handleInput(e)} />
-                                    <TextField required id="standard-required" name="password" label="Password" onChange={(e)=>this.handleInput(e)} />
+                                    <TextField required id="standard-required" name="username" label="Username" onChange={(e)=>handleInput(e)} />
+                                    <TextField required id="standard-required" name="password" label="Password" onChange={(e)=>handleInput(e)} />
                                 </CardContent>
                             </CardActionArea>
                             <CardActions>
@@ -66,5 +69,3 @@ class Header extends React.Component{
             </div>
         );
     }
-}
-export default Header;
