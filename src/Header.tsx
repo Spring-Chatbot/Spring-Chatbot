@@ -14,6 +14,22 @@ import {
 } from "@material-ui/core";
 
 class Header extends React.Component{
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: "",
+      password: "",
+    }
+    this.handleInput = this.handleInput.bind(this);
+  }
+
+  handleInput = (event) => {
+    this.setState({
+      username: event.target.value,
+    });
+    console.log("Hello");
+  }
+
     render(){
         return (
             <div>
@@ -32,8 +48,8 @@ class Header extends React.Component{
                                     <Typography gutterBottom variant="h5" component="h2" align="center">
                                         User Login
                                     </Typography>
-                                    <TextField required id="standard-required" label="Username" />
-                                    <TextField required id="standard-required" label="Password" />
+                                    <TextField required id="standard-required" name="username" label="Username" onChange={(e)=>this.handleInput(e)} />
+                                    <TextField required id="standard-required" name="password" label="Password" onChange={(e)=>this.handleInput(e)} />
                                 </CardContent>
                             </CardActionArea>
                             <CardActions>
