@@ -12,8 +12,8 @@ class UserLoginBox extends React.Component {
   }
 
   ChkSignIn() {
-      var LoginUseName = document.getElementById("LoginUseName").value;
-      var Loginpin = document.getElementById("LoginPIN").value;
+      const LoginUseName = document.getElementById("LoginUseName").value;
+      const Loginpin = document.getElementById("LoginPIN").value;
       if (LoginUseName === "" || Loginpin === "") {
         document.getElementById("SignInNotSuccess").style.display = "block";
       } else {
