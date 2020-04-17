@@ -13,10 +13,10 @@ class Register extends React.Component {
     }
 
     ChkSuccessReg() {
-        var FirstName = document.getElementById("FirstName").value;
-        var UseName = document.getElementById("UseName").value;
-        var EmailAdd = document.getElementById("EmailAdd").value;
-        var pin = document.getElementById("pin").value;
+        const FirstName = document.getElementById("FirstName").value;
+        const UseName = document.getElementById("UseName").value;
+        const EmailAdd = document.getElementById("EmailAdd").value;
+        const pin = document.getElementById("pin").value;
         if (FirstName === "" || UseName === "" || EmailAdd === "" || pin === "") {
             document.getElementById("success").style.display = "none";
             document.getElementById("notsuccess").style.display = "block";
