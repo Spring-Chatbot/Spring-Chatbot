@@ -60,7 +60,7 @@ export default function Conversation() {
 
     return (
         <div>
-            <h1>Welcome to Therabot</h1>
+            <h1 id="Welcome">Welcome to Therabot</h1>
             <div id="ContainerBox">
                 <textarea
                     id="ConvoUserInput"
