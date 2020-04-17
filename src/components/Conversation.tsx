@@ -6,16 +6,8 @@ import $ from "jquery";
 //import firebase from "../firebase.js"
 
 export default function Conversation() {
-    // export default class Conversation extends React.Component {
-    /*
-    constructor(props : PropTypes) {
-        super(props);
-        this.appendUserConvo = this.appendUserConvo.bind(this);
-		this.thankUser = this.thankUser.bind(this);
-    }
 
-*/
-    /* Unused
+    /* Unused (uncomment when needed)
     let history = useHistory();
     function nextPath(path: any) {
         history.push(path);
@@ -23,13 +15,11 @@ export default function Conversation() {
     */
 
     function thankUser() {
-        if (document !== null) {
             document.getElementById("ContainerBox")!.style.display = "none";
             document.getElementById("Buttons")!.style.display = "none";
             if (document.getElementById("Welcome") !== null)
                 document.getElementById("Welcome")!.style.display = "none";
             document.getElementById("thankyou")!.style.display = "block";
-        }
     }
 
     function appendUserConvo() {
@@ -74,7 +64,6 @@ export default function Conversation() {
             <div id="ContainerBox">
                 <textarea
                     id="ConvoUserInput"
-                    // type="text"
                     placeholder="What's on your mind?"
                     defaultValue={""}
                 />
