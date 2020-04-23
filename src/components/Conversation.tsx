@@ -6,7 +6,6 @@ import $ from "jquery";
 //import firebase from "../firebase.js"
 
 export default function Conversation() {
-
     /* Unused (uncomment when needed)
     let history = useHistory();
     function nextPath(path: any) {
@@ -15,11 +14,11 @@ export default function Conversation() {
     */
 
     function thankUser() {
-            document.getElementById("ContainerBox")!.style.display = "none";
-            document.getElementById("Buttons")!.style.display = "none";
-            if (document.getElementById("Welcome") !== null)
-                document.getElementById("Welcome")!.style.display = "none";
-            document.getElementById("thankyou")!.style.display = "block";
+        document.getElementById("ContainerBox")!.style.display = "none";
+        document.getElementById("Buttons")!.style.display = "none";
+        if (document.getElementById("Welcome") !== null)
+            document.getElementById("Welcome")!.style.display = "none";
+        document.getElementById("thankyou")!.style.display = "block";
     }
 
     function appendUserConvo() {
