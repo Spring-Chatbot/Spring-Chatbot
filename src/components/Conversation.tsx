@@ -71,7 +71,7 @@ export default function Conversation() {
             </div>
             <div id="Buttons">
                 <button id="LeaveRoom" type="button" onClick={thankUser}>
-                    &gt; Leave Chatroom
+                    Leave Chatroom
                 </button>
                 <button
                     id="UserSubmitConvo"
