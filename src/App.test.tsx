@@ -1,5 +1,5 @@
 import React from "react";
-import { render, fireEvent, screen } from "@testing-library/react";
+import { render, fireEvent } from "@testing-library/react";
 import App from "./App";
 
 /* A preserved example
@@ -11,28 +11,57 @@ test("renders learn react link", () => {
 */
 
 test("register a user", () => {
-    render(<App />);
+    const utils = render(<App />);
 
     {
-        const registerButton = screen.getByText(/register/i);
+        const registerButton = utils.getByText(/register/i);
         expect(registerButton).toBeInTheDocument();
         fireEvent.click(registerButton);
     }
 
     {
-        fireEvent.change(screen.getByPlaceholderText(/username/i), {
+        fireEvent.change(utils.getByPlaceholderText(/username/i), {
             target: { value: "testbot" }
         });
-        fireEvent.change(screen.getByPlaceholderText(/first name/i), {
+        fireEvent.change(utils.getByPlaceholderText(/first name/i), {
             target: { value: "test" }
         });
-        fireEvent.change(screen.getByPlaceholderText(/e-mail/i), {
+        fireEvent.change(utils.getByPlaceholderText(/e-mail/i), {
             target: { value: "test@test.com" }
         });
-        fireEvent.change(screen.getByPlaceholderText(/pin/i), {
+        fireEvent.change(utils.getByPlaceholderText(/pin/i), {
             target: { value: "123" }
         });
-        fireEvent.click(screen.getByText(/done/i));
-        expect(screen.getByText(/success!/i)).toBeInTheDocument();
+        fireEvent.click(utils.getByText(/done/i));
+        expect(utils.getByText(/success!/i)).toBeInTheDocument();
+    }
+});
+
+test("login a user", () => {
+    const utils = render(<App />);
+
+    // Apparently, the previous test interferes with this one and I do not know how to restart the session
+    if (utils.getByText(/login/i)) {
+        fireEvent.click(utils.getByText(/login/i));
+    }
+
+    const loginButton = utils.getByText(/Sign in/);
+    expect(loginButton).toBeInTheDocument();
+
+    {
+        fireEvent.change(utils.getByPlaceholderText(/username/i), {
+            target: { value: "testbot" }
+        });
+
+        fireEvent.change(utils.getByPlaceholderText(/pin/i), {
+            target: { value: "123" }
+        });
+    }
+
+    fireEvent.click(loginButton);
+
+    {
+        const messageBox = utils.getByPlaceholderText(/what's on your mind/i);
+        expect(messageBox).toBeInTheDocument();
     }
 });
