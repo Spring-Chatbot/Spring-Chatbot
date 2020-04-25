@@ -1,7 +1,6 @@
 import React from "react";
 // import { useHistory } from "react-router-dom";
 import "../css/ConversationStyle.css";
-import "../css/ThankYouPage.css";
 import $ from "jquery";
 //import firebase from "../firebase.js"
 
