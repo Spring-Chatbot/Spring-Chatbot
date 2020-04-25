@@ -1,0 +1,49 @@
+#MainBox {
+	margin: -175px 0 0 -290px;
+	width: 580px;
+	height: 350px;
+}
+
+#MainTextBox{
+	left: 33%;
+}
+
+#LoginUserName, #LoginPIN{
+	width: 420px;
+}
+
+#LoginUserName{
+	position: absolute;
+	top: 80px;
+}
+
+#LoginPIN{
+	position: relative;
+	top: 110px;
+}
+
+#LoginButtons{
+	position: relative;
+	top: 140px;
+}
+
+#SignInNotSuccess{
+	background-color: white;
+	width: 480px;
+	height: 40px;
+	font-size: 18px;
+	line-height: 40px;
+	border-radius: 3px;
+	margin-top: 60px;
+	margin-left: 260px;
+}
+
+button.SignInButton{
+	margin-left: 20px;
+}
+
+#UserLoginButtons{
+	width: 420px;
+	margin-top: 150px;
+	margin-left: 290px;
+}
