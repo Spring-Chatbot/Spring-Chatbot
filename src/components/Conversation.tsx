@@ -68,8 +68,7 @@ export default function Conversation() {
                     defaultValue={""}
                 />
                 <div id="ConvoHistory" />
-            </div>
-            <div id="Buttons">
+		<div id="Buttons">
                 <button id="LeaveRoom" type="button" onClick={thankUser}>
                     Leave Chatroom
                 </button>
@@ -80,6 +79,7 @@ export default function Conversation() {
                 >
                     Submit
                 </button>
+            	</div>
             </div>
             <div id="thankyou" style={{ display: "none" }}>
                 <p>Thank you for using Therabot!</p>
