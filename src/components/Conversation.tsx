@@ -1,7 +1,6 @@
 import React from "react";
 // import { useHistory } from "react-router-dom";
 import "../css/ConversationStyle.css";
-import "../css/ThankYouPage.css";
 import $ from "jquery";
 //import firebase from "../firebase.js"
 
@@ -68,10 +67,9 @@ export default function Conversation() {
                     defaultValue={""}
                 />
                 <div id="ConvoHistory" />
-            </div>
             <div id="Buttons">
                 <button id="LeaveRoom" type="button" onClick={thankUser}>
-                    &gt; Leave Chatroom
+                    Leave Chatroom
                 </button>
                 <button
                     id="UserSubmitConvo"
@@ -81,6 +79,7 @@ export default function Conversation() {
                     Submit
                 </button>
             </div>
+	</div>
             <div id="thankyou" style={{ display: "none" }}>
                 <p>Thank you for using Therabot!</p>
             </div>

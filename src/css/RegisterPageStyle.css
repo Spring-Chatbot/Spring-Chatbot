@@ -35,15 +35,11 @@
 	margin-left: 400px;
 }
 
-input[type=text] {
+#FirstName, #UseName, #EmailAdd, #Pin, #DoneButton{
 	width: 665px;
-	margin-left: -20px;
+	margin-top: 15px;
 }
 
-button{
-	float: center;
-}
-
-#TextMargin{
-	margin-left: 0px;
+#DoneButton{
+	width: 200px
 }

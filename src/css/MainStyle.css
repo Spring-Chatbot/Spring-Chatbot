@@ -13,6 +13,8 @@ h1 {
 	line-height: 65px;
 	font-weight: normal;
 	font-size: 25px;
+	width: 100%;
+	text-align: center;
 }
 
 #MainBox {
@@ -50,7 +52,6 @@ input[type=text] {
 	border-radius: 3px;
 	font-size: 18px;
 	height: 40px;
-	margin-top: 25px;
 	text-indent: 15px;
 }
 
@@ -60,7 +61,6 @@ button{
 	border: none;
 	color: white;
 	font-size: 18px;
-	margin-top: 25px;
 	text-align: center;
 	width: 200px;
 	height: 42px;
