@@ -3,7 +3,6 @@ import { useHistory } from "react-router-dom";
 import "../css/RegisterPageStyle.css";
 
 export default function Register() {
-
     let history = useHistory();
     function nextPath(path: any) {
         history.push(path);
