@@ -65,3 +65,22 @@ test("login a user", () => {
         expect(messageBox).toBeInTheDocument();
     }
 });
+
+test("send a message", ()=>{
+
+    const utils = render(<App />);
+
+    {
+
+        fireEvent.change(utils.getByPlaceholderText(/what's on your mind/i), {
+target: {value: "Test message"}
+            });
+    }
+
+    const submitButton = utils.getByText(/submit/i);
+    expect(submitButton).toBeInTheDocument();
+
+    fireEvent.click(submitButton);
+
+    expect(utils.getByText(/flerp/i)).toBeInTheDocument();
+});
