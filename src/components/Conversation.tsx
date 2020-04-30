@@ -66,19 +66,19 @@ export default function Conversation() {
                     defaultValue={""}
                 />
                 <div id="ConvoHistory" />
-            <div id="Buttons">
-                <button id="LeaveRoom" type="button" onClick={thankUser}>
-                    Leave Chatroom
-                </button>
-                <button
-                    id="UserSubmitConvo"
-                    type="button"
-                    onClick={appendUserConvo}
-                >
-                    Submit
-                </button>
+                <div id="Buttons">
+                    <button id="LeaveRoom" type="button" onClick={thankUser}>
+                        Leave Chatroom
+                    </button>
+                    <button
+                        id="UserSubmitConvo"
+                        type="button"
+                        onClick={appendUserConvo}
+                    >
+                        Submit
+                    </button>
+                </div>
             </div>
-	</div>
             <div id="thankyou" style={{ display: "none" }}>
                 <p>Thank you for using Therabot!</p>
             </div>
