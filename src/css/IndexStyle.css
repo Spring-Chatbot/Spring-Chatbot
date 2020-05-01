@@ -8,16 +8,16 @@
 	left: 33%;
 }
 
-#LoginUserName, #LoginPIN{
+#email, #password{
 	width: 420px;
 }
 
-#LoginUserName{
+#email{
 	position: absolute;
 	top: 80px;
 }
 
-#LoginPIN{
+#password{
 	position: relative;
 	top: 110px;
 }
