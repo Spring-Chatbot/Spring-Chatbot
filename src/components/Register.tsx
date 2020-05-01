@@ -1,8 +1,10 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import "../css/RegisterPageStyle.css";
+import firebase from '../firebase';
 
 export default function Register() {
+
     let history = useHistory();
     function nextPath(path: any) {
         history.push(path);
@@ -11,30 +13,33 @@ export default function Register() {
     function checkSuccessReg() {
         const getValue = (id: string) =>
             (document.getElementById(id)! as HTMLInputElement).value;
+	
+		
+		const email = getValue("Email");
+		const pass = getValue("Password");
 
-        const FirstName = getValue("FirstName");
-        const UseName = getValue("UseName");
-        const EmailAdd = getValue("EmailAdd");
-        const Pin = getValue("Pin");
-
-        if (
-            FirstName === "" ||
-            UseName === "" ||
-            EmailAdd === "" ||
-            Pin === ""
-        ) {
+        if (email === "" || pass === "") {
             document.getElementById("success")!.style.display = "none";
+			document.getElementById("notsuccess")!.innerHTML = 
+				"Registration was not successful. Please make sure all fields are filled out.";
             document.getElementById("notsuccess")!.style.display = "block";
-        } else {
-            document.getElementById("success")!.style.display = "block";
-            document.getElementById("BackToLogin")!.style.display = "block";
-            document.getElementById("notsuccess")!.style.display = "none";
-            document.getElementById("FirstName")!.style.display = "none";
-            document.getElementById("UseName")!.style.display = "none";
-            document.getElementById("EmailAdd")!.style.display = "none";
-            document.getElementById("Pin")!.style.display = "none";
-            document.getElementById("DoneButton")!.style.display = "none";
         }
+		else {
+			// Create user
+			const auth = firebase.auth();
+			const promise = auth.createUserWithEmailAndPassword(email,pass);
+			promise.then(result => {
+				document.getElementById("success")!.style.display = "block";
+				document.getElementById("BackToLogin")!.style.display = "block";
+				document.getElementById("notsuccess")!.style.display = "none";
+				document.getElementById("DoneButton")!.style.display = "none";
+			}).catch(e => {
+				document.getElementById("success")!.style.display = "none";
+				document.getElementById("notsuccess")!.innerHTML = e.message;
+				document.getElementById("notsuccess")!.style.display = "block";
+			});
+        }
+
     }
 
     return (
@@ -44,29 +49,16 @@ export default function Register() {
                 <div id="MainBoxBanner">
                     <div id="MainTextBox">Register</div>
                 </div>
-                <input type="text" id="FirstName" placeholder="First name" />
-                <div id="TextMargin">
-                    <input type="text" id="UseName" placeholder="Username" />
-                    <input
-                        type="text"
-                        id="EmailAdd"
-                        placeholder="E-mail address"
-                    />
-                    <input
-                        type="text"
-                        id="Pin"
-                        placeholder="Please enter a custom PIN"
-                    />
-                </div>
-                <button id="DoneButton" type="button" onClick={checkSuccessReg}>
+                <input type="text" id="Email" placeholder="Enter an email address" />
+                <input type="text" id="Password" placeholder="Enter a password" />
+                <div id="buttonElement"><button id="DoneButton" type="button" onClick={checkSuccessReg}>
                     Done
-                </button>
+                </button></div>
                 <div id="success" style={{ display: "none" }}>
-                    Success! Please check your e-mail for your username and PIN.
+                    Success! You are now registered to use Therabot!
                 </div>
                 <div id="notsuccess" style={{ display: "none" }}>
-                    Registration was not successful. Please make sure all fields
-                    are filled out.
+                    
                 </div>
                 <button
                     id="BackToLogin"
