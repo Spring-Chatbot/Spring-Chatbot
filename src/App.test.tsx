@@ -66,15 +66,13 @@ test("login a user", () => {
     }
 });
 
-test("send a message", ()=>{
-
+test("send a message", () => {
     const utils = render(<App />);
 
     {
-
         fireEvent.change(utils.getByPlaceholderText(/what's on your mind/i), {
-target: {value: "Test message"}
-            });
+            target: { value: "Test message" }
+        });
     }
 
     const submitButton = utils.getByText(/submit/i);

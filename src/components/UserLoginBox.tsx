@@ -58,20 +58,20 @@ export default function UserLoginBox() {
                 <input type="text" id="email" placeholder="Enter Email Address" />
                 <input type="text" id="password" placeholder="Enter Password" />
                 <div id="UserLoginButtons">
-                <button
-                    className="RegisterButton"
-                    type="button"
-                    onClick={() => nextPath("/register")}
-                >
-                    Click here to register
-                </button>
-                <button
-                    className="SignInButton"
-                    type="submit"
-                    onClick={CheckSignIn}
-                >
-                    Sign in
-                </button>
+                    <button
+                        className="RegisterButton"
+                        type="button"
+                        onClick={() => nextPath("/register")}
+                    >
+                        Click here to register
+                    </button>
+                    <button
+                        className="SignInButton"
+                        type="submit"
+                        onClick={CheckSignIn}
+                    >
+                        Sign in
+                    </button>
                 </div>
                 <div id="SignInNotSuccess" style={{ display: "none" }}>
                     
