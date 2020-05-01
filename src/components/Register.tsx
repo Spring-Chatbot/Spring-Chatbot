@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import "../css/RegisterPageStyle.css";
-import firebase from "../firebase.js"
+import firebase from '../firebase';
 
 export default function Register() {
 
@@ -9,16 +9,6 @@ export default function Register() {
     function nextPath(path: any) {
         history.push(path);
     }
-	
-	firebase.auth().onAuthStateChanged(firebaseUser => {
-		if(firebaseUser) {
-			console.log(firebaseUser);
-			// TODO: method to not allow random ppl to type to bot
-			// without signing in first
-		} else {
-			console.log('No user signed in currently');
-		}
-	});
 
     function checkSuccessReg() {
         const getValue = (id: string) =>
