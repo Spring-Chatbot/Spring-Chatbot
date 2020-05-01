@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import "../css/IndexStyle.css";
-import firebase from "../firebase.js"
+import firebase from '../firebase';
 
 export default function UserLoginBox() {
 
@@ -9,6 +9,16 @@ export default function UserLoginBox() {
     function nextPath(path: any) {
         history.push(path);
     }
+	
+	firebase.auth().onAuthStateChanged(firebaseUser => {
+		if(firebaseUser) {
+			console.log(firebaseUser);
+			// TODO: method to not allow random ppl to type to bot
+			// without signing in first
+		} else {
+			console.log('No user signed in currently');
+		}
+	});
 
     function CheckSignIn() {
 		const getValue = (id: string) =>
@@ -22,9 +32,8 @@ export default function UserLoginBox() {
             document.getElementById("SignInNotSuccess")!.style.display =
                 "block";
         } else {
-            const auth = firebase.auth();
 			// Sign In
-			const promise = auth.signInWithEmailAndPassword(email,pass);
+			const promise = firebase.auth().signInWithEmailAndPassword(email,pass);
 			
 			promise.then(result => {
 				document.getElementById("SignInNotSuccess")!.style.display = 
