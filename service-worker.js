@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Spring-Chatbot/precache-manifest.a2eee67a399948d2a19d083d230308d6.js"
+  "/Spring-Chatbot/precache-manifest.2efad58b08ef2e2d7e7bcfd33d93b0b0.js"
 );
 
 self.addEventListener('message', (event) => {

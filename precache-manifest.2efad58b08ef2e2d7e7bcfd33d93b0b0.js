@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "964127b465f837c9943e8c3431915fc9",
+    "revision": "77e1e6ae959285148815f9dfe0259363",
     "url": "/Spring-Chatbot/index.html"
   },
   {
-    "revision": "b1df3d16e966e3bb8cf2",
+    "revision": "0b94ef4e59b72ebe589a",
     "url": "/Spring-Chatbot/static/css/main.4a436ad7.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Spring-Chatbot/static/js/2.2809568b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b1df3d16e966e3bb8cf2",
-    "url": "/Spring-Chatbot/static/js/main.3411de0d.chunk.js"
+    "revision": "0b94ef4e59b72ebe589a",
+    "url": "/Spring-Chatbot/static/js/main.87ca3061.chunk.js"
   },
   {
     "revision": "9aef97c95ada80748c76",
