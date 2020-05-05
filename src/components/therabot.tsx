@@ -265,7 +265,7 @@ export const therabot = (userComment: string, phase: number) => {
         if (feelingChoice[0] === 0) {
             document.getElementById("ConvoHistory")!.innerHTML +=
                 "<p id='TherabotComment'>I'm not sure what you mean. Can you rephrase that?</p>";
-        } else {
+        } else
             switch (feelingChoice[1]) {
                 case 0:
                     phase = 2;
@@ -287,16 +287,15 @@ export const therabot = (userComment: string, phase: number) => {
                     document.getElementById("ConvoHistory")!.innerHTML +=
                         "<p id='TherabotComment'>Describe your fear. What is scaring you?</p>";
                     break;
-            case 4:
-                phase = 6;
+                case 4:
+                    phase = 6;
                     document.getElementById("ConvoHistory")!.innerHTML +=
                         "<p id='TherabotComment'>Depression is serious, but can be fixed. Can you describe the circustances surrounding your depression?</p>";
                     break;
             }
-        }
-    }
-    //Why is user happy?
-    else if (phase === 2) {
+
+        //Why is user happy?
+    } else if (phase === 2) {
         if (
             statement.search("JUST KIDDING") > -1 ||
             statement.search("NOT HAPPY") > -1
@@ -342,7 +341,7 @@ export const therabot = (userComment: string, phase: number) => {
                             "<p id='TherabotComment'>You seem to be frustrated.</p>";
                         phase = 0;
                         break;
-                case 1:
+                    case 1:
                         document.getElementById("ConvoHistory")!.innerHTML +=
                             "<p id='TherabotComment'>You seem to be grieving.</p>";
                         phase = 0;
@@ -389,7 +388,7 @@ export const therabot = (userComment: string, phase: number) => {
                         phase = 0;
                         break;
                     case 1:
-                    phase = 6;
+                        phase = 6;
                         document.getElementById("ConvoHistory")!.innerHTML +=
                             "<p id='TherabotComment'>Your sadness might actually be depression. Can you describe the circumstances surrounding your depression?</p>";
                         break;
@@ -438,18 +437,17 @@ export const therabot = (userComment: string, phase: number) => {
                         document.getElementById("ConvoHistory")!.innerHTML +=
                             "<p id='TherabotComment'>You seem to be anxious.</p>";
                         phase = 0;
-                    break;
-                case 2:
+                        break;
+                    case 2:
                         document.getElementById("ConvoHistory")!.innerHTML +=
                             "<p id='TherabotComment'>You seem to have a phobia.</p>";
                         phase = 0;
-                    break;
+                        break;
                 }
             }
         }
-    }
-    //Why is user depressed?
-    else if (phase === 6) {
+        //Why is user depressed?
+    } else if (phase === 6) {
         if (
             statement.search("JUST KIDDING") > -1 ||
             statement.search("NOT DEPRESSED") > -1
@@ -484,8 +482,8 @@ export const therabot = (userComment: string, phase: number) => {
                         document.getElementById("ConvoHistory")!.innerHTML +=
                             "<p id='TherabotComment'>Depression may run in your family. It might be best to seek medical help.</p>";
                         phase = 0;
-                    break;
-                case 2:
+                        break;
+                    case 2:
                         document.getElementById("ConvoHistory")!.innerHTML +=
                             "<p id='TherabotComment'>Your depression may be linked to your drug use. Thirty-percent of drug users experience depression. It might be best to stop use until you recover from your depression.</p>";
                         phase = 0;
