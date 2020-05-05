@@ -43,7 +43,7 @@ export const therabot = (userComment: string, phase: number)=>{
 		const depressedUserAbusesDrugs = ["drugs", "meth", "methamphetamine", "cocain", "crack", "tobacco", "smoke", "weed", "inject", "snort"];
 		const userIsDepressed = [depressedUserHasPastTrauma, depressedUserInheritedDepression, depressedUserAbusesDrugs];
 
-        const statement = userComment.toUpperCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+        const statement = userComment.toUpperCase().replace(/[.,/#!$%^&*;:{}=\-_`~()]/g,"");
         const words = statement.split(" ");
 
         if (phase==0) {
