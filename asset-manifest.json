@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Spring-Chatbot/static/css/main.0acfd1fc.chunk.css",
-    "main.js": "/Spring-Chatbot/static/js/main.c2f7772c.chunk.js",
-    "main.js.map": "/Spring-Chatbot/static/js/main.c2f7772c.chunk.js.map",
+    "main.css": "/Spring-Chatbot/static/css/main.4a436ad7.chunk.css",
+    "main.js": "/Spring-Chatbot/static/js/main.3411de0d.chunk.js",
+    "main.js.map": "/Spring-Chatbot/static/js/main.3411de0d.chunk.js.map",
     "runtime-main.js": "/Spring-Chatbot/static/js/runtime-main.1c5d4cde.js",
     "runtime-main.js.map": "/Spring-Chatbot/static/js/runtime-main.1c5d4cde.js.map",
-    "static/js/2.08247032.chunk.js": "/Spring-Chatbot/static/js/2.08247032.chunk.js",
-    "static/js/2.08247032.chunk.js.map": "/Spring-Chatbot/static/js/2.08247032.chunk.js.map",
+    "static/js/2.2809568b.chunk.js": "/Spring-Chatbot/static/js/2.2809568b.chunk.js",
+    "static/js/2.2809568b.chunk.js.map": "/Spring-Chatbot/static/js/2.2809568b.chunk.js.map",
     "index.html": "/Spring-Chatbot/index.html",
-    "precache-manifest.d531f47465a993b47bd64aba59df4e93.js": "/Spring-Chatbot/precache-manifest.d531f47465a993b47bd64aba59df4e93.js",
+    "precache-manifest.a2eee67a399948d2a19d083d230308d6.js": "/Spring-Chatbot/precache-manifest.a2eee67a399948d2a19d083d230308d6.js",
     "service-worker.js": "/Spring-Chatbot/service-worker.js",
-    "static/css/main.0acfd1fc.chunk.css.map": "/Spring-Chatbot/static/css/main.0acfd1fc.chunk.css.map",
-    "static/js/2.08247032.chunk.js.LICENSE.txt": "/Spring-Chatbot/static/js/2.08247032.chunk.js.LICENSE.txt"
+    "static/css/main.4a436ad7.chunk.css.map": "/Spring-Chatbot/static/css/main.4a436ad7.chunk.css.map",
+    "static/js/2.2809568b.chunk.js.LICENSE.txt": "/Spring-Chatbot/static/js/2.2809568b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1c5d4cde.js",
-    "static/js/2.08247032.chunk.js",
-    "static/css/main.0acfd1fc.chunk.css",
-    "static/js/main.c2f7772c.chunk.js"
+    "static/js/2.2809568b.chunk.js",
+    "static/css/main.4a436ad7.chunk.css",
+    "static/js/main.3411de0d.chunk.js"
   ]
 }
