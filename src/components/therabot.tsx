@@ -241,7 +241,7 @@ export const therabot = (userComment: string, phase: number) => {
         let feelingChoice;
 
         let feelingScores = [0, 0, 0, 0, 0];
-        for (let e in emotions) {
+        for (let i = 0; i < emotions.length; i++) {
             negative = 0;
             for (let w in words) {
                 if (words[w] === "NOT" || words[w] === "DON'T") {
