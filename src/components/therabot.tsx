@@ -46,12 +46,12 @@ export const therabot = (userComment: string, phase: number)=>{
         const statement = userComment.toUpperCase().replace(/[.,/#!$%^&*;:{}=\-_`~()]/g,"");
         const words = statement.split(" ");
 
-        if (phase==0) {
+        if (phase===0) {
             document.getElementById("ConvoHistory")!.innerHTML += 
 				"<p id='TherabotComment'>Oh, you have something else to say?</p>";
 			phase = 1;
         }
-        else if (words.length==0) {
+        else if (words.length===0) {
             const randomRank = Math.floor((Math.random() * nullResponse.length));
             document.getElementById("ConvoHistory")!.innerHTML += 
 				"<p id='TherabotComment'>"+nullResponse[randomRank]+"</p>";
@@ -75,20 +75,20 @@ export const therabot = (userComment: string, phase: number)=>{
             }
 			phase = 0;
         }
-        else if (phase==1) {           
+        else if (phase===1) {           
             let feelingChoice;                
             
             let feelingScores = [0,0,0,0,0];
             for (let e in emotions) { 
                 negative = 0; 
                 for (let w in words) {
-                    if (words[w]=="NOT" || words[w]=="DON'T") {
+                    if (words[w]==="NOT" || words[w]==="DON'T") {
                         negative += 1;
                     }                
                     else {
 						for (let e in emotions) {
 							for (let k in emotions[e]) {
-								if (words[w]==emotions[e][k].toUpperCase()) {                        
+								if (words[w]===emotions[e][k].toUpperCase()) {                        
 									if (negative>0) {
 										feelingScores[e]--;
 										negative--;
@@ -103,7 +103,7 @@ export const therabot = (userComment: string, phase: number)=>{
                 }
             }
             feelingChoice = findHighestScore(feelingScores);
-            if (feelingChoice[0]==0) {
+            if (feelingChoice[0]===0) {
                 document.getElementById("ConvoHistory")!.innerHTML += 
 					"<p id='TherabotComment'>I'm not sure what you mean. Can you rephrase that?</p>";
             }
@@ -138,7 +138,7 @@ export const therabot = (userComment: string, phase: number)=>{
             }    
         }
         //Why is user happy?
-        else if (phase==2) {
+        else if (phase===2) {
             if (statement.search("JUST KIDDING")>-1 || statement.search("NOT HAPPY")>-1) {
                 phase = 1;
                 document.getElementById("ConvoHistory")!.innerHTML +=
@@ -151,7 +151,7 @@ export const therabot = (userComment: string, phase: number)=>{
             }
         }
         //Why is user angry?
-        else if (phase==3) {            
+        else if (phase===3) {            
             if (statement.search("JUST KIDDING")>-1 || statement.search("NOT ANGRY")>-1) {
                 phase = 1;
                 document.getElementById("ConvoHistory")!.innerHTML +=
@@ -163,7 +163,7 @@ export const therabot = (userComment: string, phase: number)=>{
                     negative = 0; 
                     for (let w in words) {               
                         for (let k in userIsAngry[u]) {                                                            
-                            if (words[w]==userIsAngry[u][k].toUpperCase()) {                        
+                            if (words[w]===userIsAngry[u][k].toUpperCase()) {                        
                                 responseScores[u]++;
                             }
                         }
@@ -171,7 +171,7 @@ export const therabot = (userComment: string, phase: number)=>{
                     }
                 }                
                 const responseChoice = findHighestScore(responseScores);
-                if (responseChoice[0]==0) {
+                if (responseChoice[0]===0) {
                     document.getElementById("ConvoHistory")!.innerHTML +=
 						"<p id='TherabotComment'>I'm not sure what you mean.</p>";
                 }
@@ -197,7 +197,7 @@ export const therabot = (userComment: string, phase: number)=>{
             }
         }
         //Why is user sad?
-        else if (phase==4) {
+        else if (phase===4) {
             if (statement.search("JUST KIDDING")>-1 || statement.search("NOT SAD")>-1) {
                 phase = 1;
                 document.getElementById("ConvoHistory")!.innerHTML +=
@@ -209,7 +209,7 @@ export const therabot = (userComment: string, phase: number)=>{
                     negative = 0; 
                     for (let w in words) {               
                         for (let k in userIsSad[u]) {                                                            
-                            if (words[w]==userIsSad[u][k].toUpperCase()) {                        
+                            if (words[w]===userIsSad[u][k].toUpperCase()) {                        
                                 responseScores[u]++;
                             }
                         }
@@ -217,7 +217,7 @@ export const therabot = (userComment: string, phase: number)=>{
                     }
                 }
                 const responseChoice = findHighestScore(responseScores);
-                if (responseChoice[0]==0) {
+                if (responseChoice[0]===0) {
                     document.getElementById("ConvoHistory")!.innerHTML +=
 						"<p id='TherabotComment'>I'm not sure what you mean.</p>";
                 }
@@ -243,7 +243,7 @@ export const therabot = (userComment: string, phase: number)=>{
             }
         }
         //Why is user scared?
-        else if (phase==5) {
+        else if (phase===5) {
             if (statement.search("JUST KIDDING")>-1 || statement.search("NOT SCARED")>-1) {
                 phase = 1;
                 document.getElementById("ConvoHistory")!.innerHTML +=
@@ -255,7 +255,7 @@ export const therabot = (userComment: string, phase: number)=>{
                     negative = 0; 
                     for (let w in words) {               
                         for (let k in userIsScared[u]) {                                                            
-                            if (words[w]==userIsScared[u][k].toUpperCase()) {                        
+                            if (words[w]===userIsScared[u][k].toUpperCase()) {                        
                                 responseScores[u]++;
                             }
                         }
@@ -263,7 +263,7 @@ export const therabot = (userComment: string, phase: number)=>{
                     }
                 }
                 const responseChoice = findHighestScore(responseScores);
-                if (responseChoice[0]==0) {
+                if (responseChoice[0]===0) {
                     document.getElementById("ConvoHistory")!.innerHTML +=
 						"<p id='TherabotComment'>I'm not sure what you mean.</p>";
                 }
@@ -289,7 +289,7 @@ export const therabot = (userComment: string, phase: number)=>{
             }
         }
         //Why is user depressed?
-        else if (phase==6) {
+        else if (phase===6) {
             if (statement.search("JUST KIDDING")>-1 || statement.search("NOT DEPRESSED")>-1) {
                 phase = 1;
                 document.getElementById("ConvoHistory")!.innerHTML +=
@@ -301,7 +301,7 @@ export const therabot = (userComment: string, phase: number)=>{
                     negative = 0; 
                     for (let w in words) {               
                         for (let k in userIsDepressed[u]) {                                                            
-                            if (words[w]==userIsDepressed[u][k].toUpperCase()) {                        
+                            if (words[w]===userIsDepressed[u][k].toUpperCase()) {                        
                                 responseScores[u]++;
                             }
                         }
@@ -309,7 +309,7 @@ export const therabot = (userComment: string, phase: number)=>{
                     }
                 }
                 const responseChoice = findHighestScore(responseScores);
-                if (responseChoice[0]==0) {
+                if (responseChoice[0]===0) {
                     document.getElementById("ConvoHistory")!.innerHTML +=
 						"<p id='TherabotComment'>I'm not sure what you mean</p>";
                 }
