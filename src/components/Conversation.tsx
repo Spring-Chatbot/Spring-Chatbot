@@ -1,29 +1,29 @@
 import React from "react";
 import "../css/ConversationStyle.css";
 import $ from "jquery";
-import {therabot} from "./therabot";
-import firebase from '../firebase';
+import { therabot } from "./therabot";
+import firebase from "../firebase";
 
 export default function Conversation() {
-	let phase = 1;
+    let phase = 1;
 
     function thankUser() {
-            document.getElementById("ContainerBox")!.style.display = "none";
-            document.getElementById("Buttons")!.style.display = "none";
-            document.getElementById("Welcome")!.style.display = "none";
-            document.getElementById("thankyou")!.style.display = "block";
-						firebase.auth().signOut();
-						console.log("signout");
+        document.getElementById("ContainerBox")!.style.display = "none";
+        document.getElementById("Buttons")!.style.display = "none";
+        document.getElementById("Welcome")!.style.display = "none";
+        document.getElementById("thankyou")!.style.display = "block";
+        firebase.auth().signOut();
+        console.log("signout");
     }
 
     function appendUserConvo() {
         const userComment = (document.getElementById(
             "ConvoUserInput"
         )! as HTMLTextAreaElement).value;
-				document.getElementById("ConvoHistory")!.innerHTML +=
-					"<p id='UserComment'>" + userComment + "</p>";
-				phase = therabot(userComment,phase);
-		
+        document.getElementById("ConvoHistory")!.innerHTML +=
+            "<p id='UserComment'>" + userComment + "</p>";
+        phase = therabot(userComment, phase);
+
         $("#ConvoHistory").scrollTop($("#ConvoHistory")[0].scrollHeight);
         $("#ConvoUserInput").val("");
     }
