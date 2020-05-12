@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Spring-Chatbot/static/css/main.4a436ad7.chunk.css",
-    "main.js": "/Spring-Chatbot/static/js/main.87ca3061.chunk.js",
-    "main.js.map": "/Spring-Chatbot/static/js/main.87ca3061.chunk.js.map",
+    "main.js": "/Spring-Chatbot/static/js/main.f2201831.chunk.js",
+    "main.js.map": "/Spring-Chatbot/static/js/main.f2201831.chunk.js.map",
     "runtime-main.js": "/Spring-Chatbot/static/js/runtime-main.1c5d4cde.js",
     "runtime-main.js.map": "/Spring-Chatbot/static/js/runtime-main.1c5d4cde.js.map",
     "static/js/2.2809568b.chunk.js": "/Spring-Chatbot/static/js/2.2809568b.chunk.js",
     "static/js/2.2809568b.chunk.js.map": "/Spring-Chatbot/static/js/2.2809568b.chunk.js.map",
     "index.html": "/Spring-Chatbot/index.html",
-    "precache-manifest.2efad58b08ef2e2d7e7bcfd33d93b0b0.js": "/Spring-Chatbot/precache-manifest.2efad58b08ef2e2d7e7bcfd33d93b0b0.js",
+    "precache-manifest.520434cf2769a85dd9cd3ad60b240b7b.js": "/Spring-Chatbot/precache-manifest.520434cf2769a85dd9cd3ad60b240b7b.js",
     "service-worker.js": "/Spring-Chatbot/service-worker.js",
     "static/css/main.4a436ad7.chunk.css.map": "/Spring-Chatbot/static/css/main.4a436ad7.chunk.css.map",
     "static/js/2.2809568b.chunk.js.LICENSE.txt": "/Spring-Chatbot/static/js/2.2809568b.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.1c5d4cde.js",
     "static/js/2.2809568b.chunk.js",
     "static/css/main.4a436ad7.chunk.css",
-    "static/js/main.87ca3061.chunk.js"
+    "static/js/main.f2201831.chunk.js"
   ]
 }
